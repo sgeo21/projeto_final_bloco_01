@@ -3,14 +3,21 @@ package produtos_naturais;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import produtos_naturais.model.Chas;
+import produtos_naturais.model.Comidas;
+import produtos_naturais.model.Produtos;
 import produtos_naturais.util.Cores;
 
 public class Menu {
 	private static final Scanner leia = new Scanner(System.in);
+    //private static final ProdutoController produtoController = new ProdutoController();
 	public static void main(String[] args) {
 		
 		int opcao;
-	
+		
+		criarProdutosTeste();
+		
+		
 		while (true) {
 
 			System.out.println(Cores.TEXT_GREEN_BOLD + Cores.ANSI_WHITE_BACKGROUND + 
@@ -52,7 +59,7 @@ public class Menu {
 				break;
 			case 2:
 				System.out.println("A listagem de produtos é:\n\n");
-
+				
 
 				KeyPress();
 				break;
@@ -82,6 +89,7 @@ public class Menu {
 		}
 	}
 
+
 	public static void sobre() {
 		System.out.println(Cores.TEXT_GREEN_BOLD + Cores.ANSI_WHITE_BACKGROUND + "*********************************");
 		System.out.println("Projeto desenvolvido por:        ");
@@ -93,4 +101,14 @@ public class Menu {
 		System.out.println(Cores.TEXT_RESET + "\n Pressione enter para continuar...");
 		leia.nextLine();
 	}
+	private static void criarProdutosTeste() {
+		Produtos c1 = new Comidas("Banana chips", 1, 1, 12.8f , "Banana, açúcar e canela.");
+		c1.visualizar();
+		Produtos C1 = new Chas("Carqueja", 1, 2, 10.5f , "bom para dor!");
+		C1.visualizar();
+		
 	}
+	
+	
+}
+	
