@@ -6,6 +6,7 @@ public class Comidas extends Produtos {
 
 	public Comidas(String nome, int id, int categoria, float valor, String ingredientes) {
 		super(nome, id, categoria, valor);
+		this.ingredientes = ingredientes;
 
 	}
 
@@ -20,7 +21,7 @@ public class Comidas extends Produtos {
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.printf("Beneficios do chá:%s%n", this.ingredientes);
+		System.out.printf("Beneficios do chá: %s%n", this.ingredientes);
 	}
 
 }

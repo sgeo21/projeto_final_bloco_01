@@ -70,11 +70,10 @@ public abstract class Produtos {
 			System.out.printf("Dados do produto");
 			System.out.printf("*********************\n");
 			System.out.printf("Nome do produto: %s%n", this.nome);
-			System.out.printf("Número da Agencia: %d%n", this.id);
-			System.out.printf("Nome da titular: %s%n", this.categoria);
-			System.out.printf("Saldo da conta: %.2f%n", this.valor);
+			System.out.printf("Número de identificação do produto: %d%n", this.id);
+			System.out.printf("Categoria do produto: %s%n", this.categoria);
+			System.out.printf("Preço do produto: %.2f%n", this.valor);
 			
-		
 
 			}
 	

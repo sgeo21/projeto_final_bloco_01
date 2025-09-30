@@ -6,6 +6,7 @@ public class Chas extends Produtos {
 
 	public Chas(String nome, int id, int categoria, float valor, String propriedades) {
 		super(nome, id, categoria, valor);
+		this.propriedades = propriedades;
 
 	}
 
@@ -20,7 +21,7 @@ public class Chas extends Produtos {
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.printf("Beneficios do chá:%s%n", this.propriedades);
+		System.out.printf("Beneficios do chá: %s%n", this.propriedades);
 	}
 
 }
