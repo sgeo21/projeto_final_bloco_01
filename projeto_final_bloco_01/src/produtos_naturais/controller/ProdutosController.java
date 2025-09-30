@@ -2,6 +2,7 @@ package produtos_naturais.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import produtos_naturais.model.Produtos;
 import produtos_naturais.repository.ProdutosRepository;
@@ -58,6 +59,19 @@ public class ProdutosController implements ProdutosRepository {
 			System.out.printf("\nO id do produto: %d não foi encontrado!%n", id);
 			}
 	}
+	@Override
+	public void ProcurarPorNomes (String nome) {
+		List<Produtos> listaNomes =listaProdutos.stream()
+				.filter(c -> c.getNome().toUpperCase().contains(nome.toUpperCase()))
+				.collect(Collectors.toList());
+		if (listaNomes.isEmpty()) {
+			System.out.printf("\nNenhum produto foi encontrado com este nome: %s\n", nome);
+		}
+		for(var produto : listaNomes) {
+			produto.visualizar();
+		}
+		
+	}
 	
 	// Métodos auxiliares
 
@@ -73,4 +87,6 @@ public class ProdutosController implements ProdutosRepository {
 		}
 		return null;
 	}
+
+	
 }

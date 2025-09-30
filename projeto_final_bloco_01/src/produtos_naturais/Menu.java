@@ -32,6 +32,7 @@ public class Menu {
 			System.out.println("      3- Buscar produto por id           ");
 			System.out.println("      4- Atualizar dados do produto      ");
 			System.out.println("      5- Apagar produto                  ");
+			System.out.println("      6- Procurar produto por nome       ");
 			System.out.println("      0- Sair                            ");
 			System.out.println("-----------------------------------------");
 			System.out.println(" Selecione a opção desejada:             ");
@@ -85,6 +86,13 @@ public class Menu {
 				System.out.println("Apagar produto\n\n");
 				
 				deletarProduto();
+
+				KeyPress();
+				break;
+			case 6:
+				System.out.println("Encontrar produto por Nome:\n\n");
+				
+				procurarPorNome();
 
 				KeyPress();
 				break;
@@ -218,6 +226,11 @@ public class Menu {
 		} else { 
 			System.out.printf("\nO Id do produto %d não foi encontrado!", id);
 		}
+	}
+	private static void procurarPorNome() { // aqui pode ser fiderente do nome abaixo, importante que esse será usado no menu
+		System.out.println("Digite oo nome do produto: ");
+		String nome = leia.nextLine();
+		produtoController.ProcurarPorNomes(nome);
 	}
 
 }

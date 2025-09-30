@@ -9,6 +9,7 @@ public interface ProdutosRepository {
 	public void atualizar(Produtos Produto); //4
 	public void procurarPorId (int id); //3
 	public void deletar(int id); //5
+	public void ProcurarPorNomes (String nome);
 	
 	
 }
