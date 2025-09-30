@@ -21,7 +21,7 @@ public class Comidas extends Produtos {
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.printf("Beneficios do chá: %s%n", this.ingredientes);
+		System.out.printf("Os ingredientes são: %s%n", this.ingredientes);
 	}
 
 }
