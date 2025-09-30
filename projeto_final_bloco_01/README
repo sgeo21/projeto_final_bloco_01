@@ -1,0 +1,165 @@
+# Projeto Loja de Produtos Naturais - Java
+
+<br />
+
+<div align="center">
+	<img src="https://i.imgur.com/IaD4lwg.png" title="source: imgur.com" width="35%"/>
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://img.shields.io/github/languages/top/rafaelq80/aulas_java_t82?style=flat-square" />
+  <img src="https://img.shields.io/github/repo-size/rafaelq80/aulas_java_t82?style=flat-square" />
+  <img src="https://img.shields.io/github/languages/count/rafaelq80/aulas_java_t82?style=flat-square" />
+  <img src="https://img.shields.io/github/last-commit/rafaelq80/aulas_java_t82?style=flat-square" />
+  <img src="https://img.shields.io/github/issues/rafaelq80/aulas_java_t82?style=flat-square" />
+  <img src="https://img.shields.io/github/issues-pr/rafaelq80/aulas_java_t82?style=flat-square" />
+</div>
+
+
+------
+
+<br />
+
+## 1. Descrição
+
+<br />
+
+
+O **Projeto Loja de produtos naturais** é um sistema de gestão projetado para simular e administrar um e-comerce de produtos naturais. Oferece opções de comidas e chás.
+
+O sistema organiza as informações dos produtos — incluindo nome do produto, identificador do produto, preço e categoria do produto — garantindo a realização segura das operações. Seu principal objetivo é automatizar e simplificar o gerenciamento de e-commerce de , com o gerenciamento de produtos, promovendo agilidade e facilidade na inclusão de produtos nesta plataforma. 
+
+Este projeto, desenvolvido em **Java**, foca no estudo e aplicação dos conceitos de **Programação Orientada a Objetos (POO)**, incluindo:
+
+- Classes e Objetos;
+- Atributos e Métodos;
+- Modificadores de Acesso;
+- Herança e Polimorfismo;
+- Classes Abstratas;
+- Interfaces.
+
+Além de servir como um simulador funcional, o projeto oferece uma base prática para compreender os princípios fundamentais da POO aplicados a um cenário realista.
+
+<br />
+
+## 2. Funcionalidades do Projeto
+
+<br />
+
+1. **Criar Produto:** Cria um novo produto especificando nome do produto, id do produto, preço e categoria do produto e trazendo as informações especificas de cada categoria. O número do id do produto é gerado automaticamente.
+2. **Listar todos os produtos:** Lista todos os produtos cadastrados no sistema.
+3. **Consultar um produto pelo id: ** Encontra o produto pelo id.
+5. **Editar dados do Produto:** Permite atualizar os dados de um produto existente a partir do número de id.
+6. **Excluir Produto:** Remove um produto específico com base no número do id.
+
+
+<br />
+
+## 3. Diagrama de Classes
+
+<br />
+
+Um **Diagrama de Classes** é um modelo visual usado na programação orientada a objetos para representar a estrutura de um sistema. Ele exibe classes, atributos, métodos e os relacionamentos entre elas, como associações, heranças e dependências.
+
+Esse diagrama ajuda a planejar e entender a arquitetura do sistema, mostrando como os componentes interagem e se conectam. É amplamente utilizado nas fases de design e documentação de projetos.
+
+Abaixo, você confere o Diagrama de Classes do Projeto Conta Bancária:
+
+```mermaid
+classDiagram
+class Produtos {
+  - id: int
+  - categoria: int
+  - nome: String
+  - preco: float
+  + get id() int
+  + get categoria() int
+  + get nome() String
+  + get preco() float
+  + set id(id: int) void
+  + set categoria(tipo: int) void
+  + set nome(nome: String) void
+  + set preco(preco: float) void
+  + visualizar() void
+}
+class Comidas {
+  - ingredientes: String
+  + get ingredientes() string
+  + set ingredientes(ingredientes: String) void
+  + visualizar() void
+}
+class Chás {
+  - propriedades: String
+  + get propriedades() string
+  + set propriedades(propriedades: String) void
+  + visualizar() void
+}
+Comidas --> Produtos
+Chás --> Produtos
+```
+
+<br />
+
+
+## 4. Requisitos
+
+<br />
+
+Para executar os códigos localmente, você precisará de:
+
+- [Java JDK 17+](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- [Eclipse](https://eclipseide.org/) ou [STS](https://spring.io/tools)
+
+<br />
+
+## 5. Como Executar o projeto no Eclipse/STS
+
+<br />
+
+### 5.1. Importando o Projeto
+
+1. Clone o repositório do Projeto [projeto_final_bloco_01](https://github.com/sgeo21/projeto_final_bloco_01) dentro da pasta do *Workspace* do Eclipse/STS
+
+```bash
+git clone https://github.com/sgeo21/projeto_final_bloco_01
+```
+
+2. **Abra o Eclipse/STS** e selecione a pasta do *Workspace* onde você clonou o repositório do projeto
+3. No menu superior do Eclipse/STS, clique na opção: **File 🡲 Import...**
+4. Na janela **Import**, selecione a opção: **General 🡲 Existing Projects into Workspace** e clique no botão **Next**
+5. Na janela **Import Projects**, no item **Select root directory**, clique no botão **Browse...** e selecione a pasta do Workspace onde você clonou o repositório do projeto
+6. O Eclipse/STS reconhecerá automaticamente o projeto
+7. Marque o Projeto Conta Bancária no item **Projects** e clique no botão **Finish** para concluir a importação
+
+<br />
+
+### 5.2. Executando o projeto
+
+1. Na guia **Package Explorer**, localize o Projeto final bloco 01
+2. Abra a **Classe Menu**
+3. Clique no botão **Run** <img src="https://i.imgur.com/MtBQjUp.png" title="source: imgur.com" width="3%"/> para executar a aplicação
+4. Caso seja perguntado qual é o tipo do projeto, selecione a opção **Java Application**
+5. O console exibirá o menu do Projeto.
+
+<br />
+
+## 6. Contribuição
+
+<br />
+
+Este repositório é parte de um projeto educacional, mas contribuições são sempre bem-vindas! Caso tenha sugestões, correções ou melhorias, fique à vontade para:
+
+- Criar uma **issue**
+- Enviar um **pull request**
+- Compartilhar com colegas que estejam aprendendo Java!
+
+<br />
+
+##  7. Contato
+
+<br />
+
+Desenvolvido por [**Geovana**](https://github.com/sgeo21)
+Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue!# Java
